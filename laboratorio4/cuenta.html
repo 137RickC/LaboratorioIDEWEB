@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Boleta de Pago</title>
+    <style>
+        table, th, td, tr{
+            border: 3px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tfoot td {
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <table>
+    <tr>
+        <!-- colspan="4" hace que la celda ocupe las 4 columnas -->
+        <th colspan="4" style="text-align:center;">Boleta de Pago</th>
+    </tr>
+    <tr>
+        <th>Producto</th>
+        <th>Cantidad</th>
+        <th>Precio Unitario</th>
+        <th>Total</th>
+    </tr>
+    <tr>
+        <td>Producto 1</td>
+        <td>1</td>
+        <td>5</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>Producto 2</td>
+        <td>3</td>
+        <td>2</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <td>Producto 3</td>
+        <td>2</td>
+        <td>3.5</td>
+        <td>7</td>
+    </tr>
+    <tfoot>
+        <tr>
+            <!-- también aquí usamos colspan para que ocupe 3 celdas -->
+            <td colspan="3" style="text-align:right;">Total General</td>
+            <td>18</td>
+        </tr>
+    </tfoot>
+</table>
+
+</body>
+</html>
