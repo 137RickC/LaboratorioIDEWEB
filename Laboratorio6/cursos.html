@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Laboratorio 6</title>
+    <link rel="styles" href="style.css">
+</head>
+    <header>
+        <hi>MENU</hi>
+    <menu>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Noticias</a></li>
+                <li><a href="#">Editorial</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Acerca de</a></li>
+            </ul>
+        </nav>
+    </menu>
+    </header>
+    <body>
+    <form action="procesar.php" method="post"> 
+        <h2>Formulario de Inscripcion</h2>
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required pattern="[A-Za-z\s]+" placeholder="Ingrese su Nombre"><br><br>
+
+        <label for="apellido">Apellido:</label><br>
+        <input type="text" id="apellido" name="apellido" required pattern="[A-Za-z\s]+" placeholder="Ingrese su Apellido"><br><br>
+
+        <label for="dni">DNI:</label><br>
+        <input type="text" id="dni" name="dni" required pattern="\d{8}" placeholder="Ingrese su DNI (8 dígitos)"><br><br>
+
+        <label for="curso">Curso:</label><br>
+        <select id="curso" name="curso" required>
+            <option value="">Seleccione un curso</option>
+            <option value="Desarrollo Web">Desarrollo Web</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Ciberseguridad">Ciberseguridad</option>
+        </select><br><br>
+        <label for="modalidad">Modalidad:</label><br>
+        <select id="modalidad" name="modalidad" required>
+            <option value="Presencial">Presencial</option>
+            <option value="Virtual">Virtual</option>
+        </select>
+        <br><br>  
+        <label for="turnos">Hoarario disponibles:</label><br>  
+        <select id="turnos" name="turnos" required>
+            <option value="Mañana">Mañana</option>
+            <option value="Tarde">Tarde</option>
+            <option value="Noche">Noche</option>
+        </select>
+        <br><br>
+        <label for="comentariios">Comentarios</label><br>
+        <textarea id="comentarios" name="comentarios" rows="4" cols="50" placeholder="Escribe tus comentarios aquí..."></textarea>
+        <br><br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Cancelar">
+</html>
