@@ -11,11 +11,11 @@
     <menu>
         <nav>
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Noticias</a></li>
-                <li><a href="#">Editorial</a></li>
-                <li><a href="#">Términos y condiciones</a></li>
-                <li><a href="#">Acerca de</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="registro.html">Crear Registro</a></li>
+                <li><a href="lenguaje.html">Lenguajes</a></li>
+                <li><a href="validacion.html">Validacion</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
             </ul>
         </nav>
     </menu>  
@@ -24,9 +24,7 @@
 <body>
     <form action="procesar.php" method="post">
         <h2>Formulario de Validacion</h2>
-        <label for="nombre">Nombre:</label><br>
-        <input type="text" id="nombre" name="nombre" required pattern="[A-Za-z\s]+" placeholder="Ingrese su Nombre"><br><br>
-
+        
         <label for="email">Correo Electrónico:</label><br>
         <input type="email" id="email" name="email" placeholder="Ingrese su Correo" required><br><br>
 
