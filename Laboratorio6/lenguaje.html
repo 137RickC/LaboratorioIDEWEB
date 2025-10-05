@@ -11,25 +11,27 @@
     <h1>LENGUAJES</h1>  
         <nav>
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Noticias</a></li>
-                <li><a href="#">Editorial</a></li>
-                <li><a href="#">Términos y condiciones</a></li>
-                <li><a href="#">Acerca de</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="registro.html">Crear Registro</a></li>
+                <li><a href="lenguaje.html">Lenguajes</a></li>
+                <li><a href="validacion.html">Validacion</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
             </ul>
         </nav>
     </header>
     <section>
         <img src="https://cdn-icons-png.flaticon.com/512/12225/12225881.png" alt="Foto de perfil" style="height: 100px"><br><br>
         <form>
-            <p>Que lenguaje de programcion conces?</p>
+            <label for="fotoperfil">Subir foto de perfil:</label><br>
+            <input type="file" id="fotoperfil" name="fotoperfil" accept="image/*">
+            <br><br>
+            <p>Que lenguaje de programcion conoces?</p>
             <label><input type="checkbox" name="lenguaje" value="python"> Python</label><br>
             <label><input type="checkbox" name="lenguaje" value="java"> Java</label><br>
-            <label><input type="checkbox" name="lenguaje" value="javascript"> Java</label><br>
+            <label><input type="checkbox" name="lenguaje" value="javascript"> javascript</label><br>
             <label><input type="checkbox" name="lenguaje" value="html"> HTML</label><br>
             <label><input type="checkbox" name="lenguaje" value="css"> CSS</label><br><br>
                 
-            <input type="text" id="search" name="search" placeholder="Ingrese palabras clave"><br><br>
             <label for="search">Cual es tu lenguaje de programacion favorito?</label><br>
             <input type="text" id="search" name="search" placeholder="Ingrese palabras clave"><br><br>
             <label for="number">Cuantas horas de programacion estudias al dia?</label><br>
