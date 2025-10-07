@@ -1,0 +1,40 @@
+h1 {
+    color: lightgreen;
+}
+p {
+    font-style: italic; 
+}
+.titulo {
+    text-align: center;
+    font-size: 24px;
+    color: red;
+}
+.caja{
+    background-color: yellow;
+    color: blue;
+    padding: 10px;
+    margin: 15px;
+}
+#unico {
+    color: blue;
+    font-weight: bold;
+    border: 3px solid red;
+}
+button{
+    background-color: green;
+    color: white;
+    border-radius: 15px;
+    padding: 20px 40px;
+}
+.item1{
+    border: 2px solid black;
+    background-color: gray;
+}
+.item2{
+    border-radius: 15px;
+    border:solid black;
+    background-color: gray;
+}
+.item3{
+    box-shadow:2px 3px 5px grey;
+}
