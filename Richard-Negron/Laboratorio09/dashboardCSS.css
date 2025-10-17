@@ -3,35 +3,29 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
 }
-
 .dashboard-container {
     display: grid;
     grid-template-columns: 250px 1fr;
     min-height: 100vh;
 }
-
 .sidebar {
     background: #2c3e50;
     color: white;
     padding: 20px;
 }
-
 .sidebar h2 {
     margin-bottom: 30px;
     text-align: center;
 }
-
 .sidebar nav {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-
 .sidebar a {
     color: white;
     text-decoration: none;
@@ -39,15 +33,12 @@ body {
     border-radius: 4px;
     transition: background 0.3s;
 }
-
 .sidebar a:hover {
     background: #34495e;
 }
-
 .contenido {
     padding: 20px;
 }
-
 .contenido header {
     display: flex;
     justify-content: space-between;
@@ -57,7 +48,6 @@ body {
     background: white;
     border-radius: 8px;
 }
-
 .volver {
     color: #3498db;
     text-decoration: none;
@@ -65,13 +55,11 @@ body {
     border: 1px solid #3498db;
     border-radius: 4px;
 }
-
 .tarjetas {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
 }
-
 .tarjeta {
     background: white;
     padding: 25px;
@@ -81,7 +69,6 @@ body {
     min-width: 200px;
     text-align: center;
 }
-
 .numero {
     font-size: 2em;
     font-weight: bold;

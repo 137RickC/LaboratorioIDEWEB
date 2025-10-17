@@ -3,12 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
-
 .grid-container {
     display: grid;
     grid-template-areas: 
@@ -24,7 +22,6 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
-
 .header {
     grid-area: header;
     display: flex;
@@ -35,7 +32,6 @@ body {
     color: white;
     border-radius: 8px;
 }
-
 .volver {
     color: white;
     text-decoration: none;
@@ -43,7 +39,6 @@ body {
     border: 1px solid white;
     border-radius: 4px;
 }
-
 .nav {
     grid-area: nav;
     display: flex;
@@ -52,32 +47,27 @@ body {
     background: #34495e;
     border-radius: 8px;
 }
-
 .nav a {
     color: white;
     text-decoration: none;
     padding: 10px;
 }
-
 .main {
     grid-area: main;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-
 .articulo {
     background: white;
     padding: 25px;
     border: 1px solid #bdc3c7;
     border-radius: 8px;
 }
-
 .articulo h2 {
     margin-bottom: 15px;
     color: #2c3e50;
 }
-
 .sidebar {
     grid-area: sidebar;
     background: white;
@@ -85,7 +75,6 @@ body {
     border: 1px solid #bdc3c7;
     border-radius: 8px;
 }
-
 .footer {
     grid-area: footer;
     text-align: center;
