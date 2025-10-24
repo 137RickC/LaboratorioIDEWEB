@@ -1,9 +1,16 @@
-let rango= parseInt(prompt("Ingrese el rango de la cantida de nunmero primos hasta este mismo:"))
-for(let i=0; i<rango;i++){
-    let contadorPrimos=0
-    for(const j=0;j<Math.sqrt(i);j++){
-       if(contadorPrimos===2) console.log(1);
-        else contadorPrimos=0;
+let rango = parseInt(prompt("Ingrese el rango máximo:"));
+console.log(`Números primos hasta ${rango}:`);
+
+for (let i = 2; i <= rango; i++) {
+  let esPrimo = true;
+  // Verificamos divisibilidad desde 2 hasta la raíz cuadrada del número
+  for (let j = 2; j <= Math.sqrt(i); j++) {
+    if (i % j === 0) {
+      esPrimo = false;
+      break; // ya no es primo, salimos del bucle
     }
-    
+  }
+  if (esPrimo) {
+    console.log(i);
+  }
 }

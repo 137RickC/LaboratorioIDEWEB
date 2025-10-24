@@ -1,5 +1,5 @@
 let edad = prompt("Por favor ingresa tu edad:");
-while (isNaN(edad) || edad < 0) {
+while (edad < 0) {
     edad = prompt("Entrada inválida. Por favor ingresa una edad válida:");
 }
 if (edad <12) {

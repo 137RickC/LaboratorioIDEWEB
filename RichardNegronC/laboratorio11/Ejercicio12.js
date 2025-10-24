@@ -2,7 +2,6 @@ let presupuesto = parseFloat(prompt("Ingresa tu presupuesto:"));
 while (isNaN(presupuesto) || presupuesto <= 0) {
     presupuesto = parseFloat(prompt("Presupuesto inválido. Ingresa un monto válido:"));
 }
-
 let carrito = [];
 let totalActual = 0;
 let continuar = true;
@@ -15,22 +14,20 @@ while (continuar && totalActual < presupuesto) {
     }
     
     if (totalActual + precio > presupuesto) {
-        alert(`No puedes agregar este producto. Superaría tu presupuesto de S/.${presupuesto.toFixed(2)}`);
-        continuar = false;
+        alert(`Ese producto supera tu presupuesto. Intenta con un monto menor.`);
+        continue; // <- en vez de cortar el bucle, vuelve a pedir otro
+    }
+    carrito.push(precio);
+    totalActual += precio;
+    
+    if (totalActual < presupuesto) {
+        let respuesta = prompt("¿Deseas agregar otro producto? (s/n):").toLowerCase();
+        continuar = (respuesta === 's' || respuesta === 'si');
     } else {
-        carrito.push(precio);
-        totalActual += precio;
-        
-        if (totalActual < presupuesto) {
-            let respuesta = prompt("¿Deseas agregar otro producto? (s/n):").toLowerCase();
-            continuar = (respuesta === 's' || respuesta === 'si');
-        } else {
-            alert("Has alcanzado tu presupuesto máximo.");
-            continuar = false;
-        }
+        alert("Has alcanzado tu presupuesto máximo.");
+        continuar = false;
     }
 }
-
 let totalParcial = carrito.reduce((suma, precio) => suma + precio, 0);
 let descuento = 0;
 let mensajeDescuento = "";
@@ -58,5 +55,6 @@ if (descuento > 0) {
 resumen += `TOTAL A PAGAR: S/.${totalFinal.toFixed(2)}\n`;
 resumen += `Presupuesto restante: S/.${(presupuesto - totalFinal).toFixed(2)}`;
 
+console.clear();
 console.log(resumen);
 alert(resumen);

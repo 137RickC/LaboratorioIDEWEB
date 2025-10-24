@@ -1,5 +1,5 @@
-let impares=0;
-let pares=0;
+let impares=0;//contador de impares
+let pares=0;//contador de pares
 
 for(let i=1; i<=10; i++){
     let numero = parseInt(prompt("Ingrese el número " + i + ":"));
