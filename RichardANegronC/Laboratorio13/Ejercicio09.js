@@ -7,5 +7,4 @@ let auto = {
         console.log(`Marca: ${this.marca}, Modelo: ${this.modelo}, Año: ${this.año}`);
     },
 };
-
 auto.detalles();
