@@ -16,5 +16,5 @@ class Push extends Notificacion{
     return "Esto es un Push";
   }  
 }
-let arr=[new Email(), new Sms(), new Push()]
-arr.forEach(item=>console.log(item.enviar()))
+let arr=[new Email(), new Sms(), new Push()];
+arr.forEach(item=>console.log(item.enviar()));
