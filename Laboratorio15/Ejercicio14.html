@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 14 - Laboratorio 15</title>
+</head>
+<body>
+    <style>
+        .Contenedor{
+            border: 2px solid black;
+            padding: 10px;
+            width: 200px;
+        }
+    </style>
+    <div class="Contenedor">
+        <p>p1 sin mod</p>
+        <p>p2 sin mod</p>
+        <h1>h1 sin mod</h1> 
+    </div>
+    <script>
+        const div = document.getElementsByClassName("Contenedor")
+        const contenido=[...div[0].children]
+        for(let i = 0; i < contenido.length; i++) {
+            contenido[i].remove()
+        }
+    </script>
+</html>

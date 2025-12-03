@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 12 - Laboratorio 15</title>
+</head>
+<body>
+    <style>
+        div {
+            background-color: lightblue;
+        }
+    </style>   
+    <p>p1 sin mod</p>
+    <script>
+        const parrafo = document.querySelector("p");
+        const nuevoDiv= document.createElement("div")
+        nuevoDiv.textContent="Parrafo reemplazado"
+        parrafo.replaceWith(nuevoDiv)
+    </script>
+</html>

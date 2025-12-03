@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 04 - Laboratorio 15</title>
+</head>
+<body>
+    <div class="contenedor">
+        <p>js</p>
+        <p>ave</p>
+        <p>pera</p>
+    </div>
+    
+    
+    <script>
+        const contenedor = document.querySelector(".contenedor");
+        const elementos =contenedor.querySelectorAll("p")
+        const textos = Array.from(elementos).map(elem => elem.textContent).sort();
+        elementos.forEach((elem, i) => {
+            elem.textContent = textos[i];
+        });
+    </script>
+</body>
+</html>

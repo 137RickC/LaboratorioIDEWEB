@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11 - Laboratorio 15</title>
+</head>
+<body>
+    <section>
+        <p>section</p>
+        
+    </section>
+    <script>
+        const section = document.querySelector("section");
+        const ul= document.createElement("ul");
+        for(let i=0; i<5;i++){
+            let li=document.createElement("li")
+            li.textContent="Elemento "+(i+1)
+            ul.appendChild(li); 
+        }
+        section.appendChild(ul);
+    </script>
+</body>
+</html>

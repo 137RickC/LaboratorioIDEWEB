@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 20 - Laboratorio 15</title>
+</head>
+<body>
+    
+    
+    <script>
+        const ulCreado= document.createElement("ul")
+        for(let i = 0; i <4; i++) {
+            const liCreado= document.createElement("li")
+            liCreado.textContent= "li"+ (i+1)
+            const spamCreado= document.createElement("span")
+            spamCreado.textContent= " Spam creado"+ (i+1)
+            liCreado.appendChild(spamCreado)
+            ulCreado.appendChild(liCreado)
+        }
+        document.body.appendChild(ulCreado)
+    </script>
+</html>

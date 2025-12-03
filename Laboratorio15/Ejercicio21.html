@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 21 - Laboratorio 15</title>
+</head>
+<body>  
+    
+    <script>
+        const div= document.createElement("div")
+        div.id="contenedor"
+        for(let i=0; i<3;i++){
+            const parrafo=document.createElement("p")
+            parrafo.textContent="Parrafo "+(i+1)
+            div.appendChild(parrafo)
+        }
+        document.body.appendChild (div)
+        const p2=div.querySelectorAll("p")[1]
+        p2.remove()
+
+    </script>
+</body>
+</html>

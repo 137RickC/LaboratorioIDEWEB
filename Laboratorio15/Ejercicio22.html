@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 22 - Laboratorio 15</title>
+</head>
+<body>
+    <section>
+
+    </section>
+    <script>
+        const section= document.querySelector("section")
+        const newH2= document.createElement("h2")
+        newH2.textContent="Titulo nuevo"
+        const parrafo= document.createElement("p")
+        parrafo.textContent="Descripcion generada"
+        const newlista= document.createElement("ul")
+        for(let i=0;i<3;i++){
+            const li=document.createElement("li")
+            li.textContent="Item "+(i+1)
+            newlista.appendChild(li)
+        }
+        section.appendChild(newH2)
+        section.appendChild(parrafo)
+        section.appendChild(newlista)
+        //parete 2
+        const h2= section.querySelectorAll("h2")[0]
+        h2.remove()
+    </script>
+</body>
+</html>

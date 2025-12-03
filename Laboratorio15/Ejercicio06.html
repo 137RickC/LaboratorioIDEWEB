@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 05 - Laboratorio 15</title>
+    <style>
+        .resaltado {
+            color: red;
+            font-weight: bold;
+        }
+        .oculto{
+            display: none;
+            color : blue;
+        }
+        </style>
+</head>
+<body>
+    <ul>
+        <li class="oculto">Contenido original del div</li>
+        <li>Elemento de lista</li>
+        <li class="oculto">Otro elemento de lista</li>
+    </ul>
+    <script>
+        const lista = document.querySelectorAll("li");
+        lista.forEach(li=>{
+            li.classList.remove("oculto");
+            li.classList.add("resaltado");
+        })
+    </script>
+</body>
+</html>

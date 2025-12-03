@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 04 - Laboratorio 15</title>
+</head>
+<body>
+    <p>p1 sin mod</p>
+    <p>p2 sin mod</p>
+    
+    <script>
+        const parrafo = document.getElementsByTagName("p");
+        for(let i = 0; i < parrafo.length; i++) {
+            parrafo[i].textContent = "parrafo modificado "
+        }
+    </script>
+</body>
+</html>

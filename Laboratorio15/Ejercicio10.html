@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10 - Laboratorio 15</title>
+</head>
+<body>
+    <p>p1 sin mod</p>
+    <p>p2 sin mod</p>
+    <h1>h1 con mod</h1>
+    <h2>h2 con mof</h2>
+    
+    <script>
+        let h3 = document.createElement("h3");
+        const parrafo = document.querySelector("p");
+        h3.textContent="Nuevo h3 creado con JS";
+        parrafo.before(h3);
+    </script>
+</body>
+</html>

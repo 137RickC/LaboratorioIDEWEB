@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 08 - Laboratorio 15</title>
+</head>
+<body>
+    <div>
+        <p>Contenido del primer div</p>
+    </div>
+    <div>
+        <p>Contenido del segundo div</p>
+    </div>
+    <div>
+        <p>Contenido del tercer div</p>
+    </div>
+    <script>
+        const divs = document.querySelectorAll("div");
+        const colors=["red","blue","green"]
+        divs.forEach((div,i) => {
+            div.style.background = colors[i]
+        });
+    </script>
+</body>
+</html>
