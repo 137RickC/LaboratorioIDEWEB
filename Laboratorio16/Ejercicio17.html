@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="info"></div>
+
+    <script>
+        const usuario = {
+            nombre: "Richard",
+            correo: "negronricha@gmail.com",
+            rol: "admin"
+        }
+
+        localStorage.setItem("usuario", JSON.stringify(usuario))
+
+        const recuperado = JSON.parse(localStorage.getItem("usuario"))
+
+        document.getElementById("info").textContent =
+            `${recuperado.nombre} - ${recuperado.correo} - ${recuperado.rol}`
+    </script>
+
+</body>
+</html>

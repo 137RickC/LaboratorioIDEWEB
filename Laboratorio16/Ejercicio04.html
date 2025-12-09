@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 04 - Laboratorio 16</title>
+</head>
+<body>
+    <p>Texto original</p>
+    <button id ="modificar">Modificar párrafo</button>
+    <script>
+        const boton= document.getElementById("modificar")
+        let boolDeTextoCambiado= false
+        boton.addEventListener("click", ()=>{
+            const parrafo= document.querySelector("p")
+            boolDeTextoCambiado=!boolDeTextoCambiado
+            parrafo.textContent=boolDeTextoCambiado?"texto cambiado":"Texto original"
+        })
+    </script>
+</html>

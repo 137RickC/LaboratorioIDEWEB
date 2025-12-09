@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10 - Laboratorio 16</title>
+</head>
+<body>
+
+<button id="mostrar">Generar tabla</button>
+
+<div id="contenedor"></div>
+
+<script>
+    const productos = [
+        { nombre: "Laptop", precio: 3500 },
+        { nombre: "Mouse", precio: 80 },
+    ];
+
+    const btn = document.getElementById("mostrar")
+    const contenedor = document.getElementById("contenedor")
+
+    btn.addEventListener("click", () => {
+
+        const tabla = document.createElement("table")
+        tabla.border = "1"
+        tabla.style.borderCollapse = "collapse"
+
+        const thead = document.createElement("thead")
+        const filaHead = document.createElement("tr")
+
+        Object.keys(productos[0]).forEach(key => {
+            const th = document.createElement("th")
+            th.textContent = key.toUpperCase()
+            filaHead.appendChild(th)
+        })
+        thead.appendChild(filaHead)
+        tabla.appendChild(thead)
+
+        const tbody = document.createElement("tbody")
+
+        productos.forEach(prod => {
+            const fila = document.createElement("tr")
+            Object.values(prod).forEach(valor => {
+                const td = document.createElement("td")
+                td.textContent = valor
+                fila.appendChild(td)
+            })
+            tbody.appendChild(fila)
+        })
+
+        tabla.appendChild(tbody)
+        contenedor.appendChild(tabla)
+    })
+</script>
+</body>
+</html>

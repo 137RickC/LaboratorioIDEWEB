@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="tareas"></ul>
+
+    <script>
+        const json = `
+        [
+            { "titulo": "Estudiar", "completada": true },
+            { "titulo": "Lavar ropa", "completada": false },
+            { "titulo": "Limpiar", "completada": true }
+        ]`
+
+
+        const tareas = JSON.parse(json)
+        const ul = document.getElementById("tareas")
+
+        tareas.forEach(t => {
+            const li = document.createElement("li")
+            li.textContent = t.titulo
+            li.style.color = t.completada ? "green" : "red"
+            ul.appendChild(li)
+        })
+    </script>
+</body>
+</html>

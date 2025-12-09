@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 06 - Laboratorio 16</title>
+</head>
+<body>
+    <span>0</span>
+    <p></p>
+    <button class="menos">-</button><button class="mas">+</button>   
+    <script>
+        const botonMas= document.querySelector(".mas")
+        const botonMenos= document.querySelector(".menos")
+        const parrafo= document.querySelector("p")
+        const span= document.querySelector("span")
+        let contador=0
+
+        function actualizarParrafo(){
+            parrafo.textContent= contador===0 ? "Cero" : contador>0 ? "Positivo" : ""
+            span.textContent=contador
+        }
+        botonMas.addEventListener("click", ()=>{
+            contador++
+            actualizarParrafo()
+        })
+        botonMenos.addEventListener("click", ()=>{
+            if(contador>0){
+                contador--
+                actualizarParrafo()
+            }else contador=0
+        })
+
+        actualizarParrafo()
+    </script> 
+</body>
+</html>

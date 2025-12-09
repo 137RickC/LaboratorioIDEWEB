@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 09 - Laboratorio 16</title>
+
+    <style>
+        #principal img {
+            width: 300px;
+            height: auto;
+            border: 2px solid #333;
+            margin-bottom: 10px;
+        }
+
+        .miniaturas img {
+            width: 80px;
+            cursor: pointer;
+            margin: 5px;
+            border: 2px solid transparent;
+        }
+
+        .miniaturas img:hover {
+            border-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="principal">
+        <img id="grande" src="" alt="Imagen grande">
+    </div>
+
+    <div class="miniaturas">
+        <img src="https://r-charts.com/es/miscelanea/procesamiento-imagenes-magick_files/figure-html/importar-imagen-r.png" alt="img1">
+        <img src="https://r-charts.com/es/miscelanea/procesamiento-imagenes-magick_files/figure-html/importar-imagen-r.png" alt="img2">
+        <img src="https://r-charts.com/es/miscelanea/procesamiento-imagenes-magick_files/figure-html/importar-imagen-r.png" alt="img3">
+    </div>
+
+    <script>
+        const grande = document.getElementById("grande")
+        const miniaturas = document.querySelectorAll(".miniaturas img")
+
+        miniaturas.forEach(mini => {
+            mini.addEventListener("click", () => {
+                grande.src = mini.src
+            })
+        })
+    </script>
+
+</body>
+</html>

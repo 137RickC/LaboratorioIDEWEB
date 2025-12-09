@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+    <input id="nombre" placeholder="Nombre">
+    <input id="edad" placeholder="Edad">
+    <button type="submit">Agregar</button>
+</form>
+
+<table border="1">
+    <thead>
+        <tr><th>Nombre</th><th>Edad</th><th>Acciones</th></tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+</table>
+
+<script>
+    const form = document.getElementById("form")
+    const tbody = document.getElementById("tbody")
+    form.addEventListener("submit", (e) => {
+        e.preventDefault()
+
+        const nombre = document.getElementById("nombre").value
+        const edad = document.getElementById("edad").value
+        const tr = document.createElement("tr")
+        tr.innerHTML = `
+            <td>${nombre}</td>
+            <td>${edad}</td>
+            <td>
+                <button class="editar">Editar</button>
+                <button class="eliminar">Eliminar</button>
+            </td>
+        `
+        tbody.appendChild(tr)
+        form.reset()
+    })
+
+    tbody.addEventListener("click", (e) => {
+        const fila = e.target.closest("tr")
+        if (e.target.classList.contains("eliminar")) {
+            fila.remove()
+        }
+        if (e.target.classList.contains("editar")) {
+            const [tdNombre, tdEdad] = fila.children
+            document.getElementById("nombre").value = tdNombre.textContent
+            document.getElementById("edad").value = tdEdad.textContent
+            fila.remove()
+        }
+    })
+</script>
+
+</body>
+</html>

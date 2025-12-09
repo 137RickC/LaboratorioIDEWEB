@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 05 - Laboratorio 16</title>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+        }
+        body.oscuro {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <p>Hola mundo</p>
+    <button>Cambiar tema</button>
+    
+    <script>
+        const body = document.querySelector("body");
+        const button = document.querySelector("button");
+        
+        button.addEventListener("click", () => {
+            body.classList.toggle("oscuro");
+        });
+    </script>
+</body>
+</html>

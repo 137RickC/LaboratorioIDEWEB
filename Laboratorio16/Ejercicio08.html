@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 08 - Laboratorio 16</title>
+  <script type="module" >
+    const form=document.querySelector("form")
+    const usuario=document.querySelector("#user")
+    const correo=document.querySelector("#email")
+    form.addEventListener("submit",(e)=>{
+      e.preventDefault()
+      if(usuario.value===""||correo.value===""){
+        const message=document.createElement("span")
+        message.textContent="Todos los campos son obligatorios"
+        document.body.appendChild(message)
+      }
+    })
+  </script>
+  <style>
+    span{
+      color:#f00
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <input id="user" type="text" placeholder="usuario">
+    <input id="email" type="email" placeholder="ejemplo@gmail.com">
+    <button type="submit">Verificar</button>
+  </form>
+</body>
+</html>
