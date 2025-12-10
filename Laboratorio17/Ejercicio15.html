@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Ejercicio 15</h2>
+
+    <script>
+    function dividirAsync(a, b) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (b === 0) reject(new Error("No se puede dividir entre cero"));
+                else resolve(a / b);
+            }, 1500);
+        });
+    }
+
+    dividirAsync(10, 0)
+        .then(res => document.write("Resultado: " + res))
+        .catch(err => document.write(err.message));
+    </script>
+
+</body>
+</html>

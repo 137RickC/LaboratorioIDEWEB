@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Ejercicio 17</h2>
+
+    <script>
+    function cargarMensaje() {
+        return new Promise(resolve => {
+            setTimeout(() => resolve("Mensaje cargado"), 1000)
+        })
+    }
+
+    async function ejecutar() {
+        let msg = await cargarMensaje()
+        document.write(msg);
+    }
+
+    ejecutar()
+    </script>
+
+</body>
+</html>

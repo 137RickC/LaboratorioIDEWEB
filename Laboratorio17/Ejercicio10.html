@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    <h2>Ejercicio 10</h2>
+
+    <script>
+    function cargarUsuario(callback) {
+        const tiempo = Math.random() * (1500 - 800) + 800;
+
+        setTimeout(() => {
+            let user = { id: 1, nombre: "Juancito" }
+            callback(user)
+        }, tiempo)
+    }
+
+    cargarUsuario(u => {
+        document.write(`Usuario cargado: ${u.nombre} (ID: ${u.id})`)
+    })
+    </script>
+
+</body>
+</html>

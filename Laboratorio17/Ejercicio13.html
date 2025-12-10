@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Ejercicio 13</h2>
+
+    <script>
+    function cargarMensaje() {
+        return new Promise(resolve => {
+            setTimeout(() => {
+                resolve("Mensaje cargado")
+            }, 1000)
+        })
+    }
+
+    cargarMensaje().then(msg => {
+        document.write(msg)
+    })
+    </script>
+
+</body>
+</html>

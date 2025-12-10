@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Ejercicio 18</h2>
+
+    <script>
+    function cargarUsuario() {
+        const tiempo = Math.random() * (1500 - 800) + 800
+
+        return new Promise(resolve => {
+            setTimeout(() => resolve({ id: 1, nombre: "Juancito" }), tiempo)
+        })
+    }
+
+    async function ejecutar() {
+        let user = await cargarUsuario()
+        document.write(`Usuario: ${user.nombre} (ID: ${user.id})`)
+    }
+
+    ejecutar()
+    </script>
+
+</body>
+</html>

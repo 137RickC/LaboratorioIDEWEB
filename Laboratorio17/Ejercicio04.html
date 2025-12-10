@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+    <h2>Ejercicio 4</h2>
+    <div id="out"></div>
+
+    <script>
+    try {
+        JSON.parse("{invalido");
+    } catch (e) {
+        document.getElementById("out").textContent = e.name + " - " + e.message;
+    }
+    </script>
+</body>
+</html>

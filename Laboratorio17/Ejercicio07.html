@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Ejercicio 7</h2>
+
+    <script>
+    try {
+        let x = null
+        x.nombre
+    } catch (e) {
+        if (e instanceof TypeError) {
+            document.write("Ocurrió un TypeError: " + e.message)
+        } else {
+            document.write("Otro tipo de error")
+        }
+    }
+    </script>
+
+</body>
+</html>

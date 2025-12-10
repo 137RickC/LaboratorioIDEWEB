@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    <h2>Ejercicio 9</h2>
+
+    <script>
+    function cargarMensaje(callback) {
+        setTimeout(() => {
+            callback("Mensaje cargado");
+        }, 1000);
+    }
+
+    cargarMensaje(msg => {
+        document.write(msg);
+    });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Ejercicio 16</h2>
+
+    <script>
+    function procesarLista(lista) {
+        let promesas = lista.map(num => {
+            const tiempo = Math.random() * (1500 - 500) + 500
+
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    document.write("Procesando " + num + "...<br>")
+                    resolve()
+                }, tiempo)
+            })
+        })
+
+        return Promise.all(promesas).then(() => "Proceso completado")
+    }
+
+    procesarLista([3, 7, 1, 9]).then(msg => {
+        document.write(msg)
+    })
+    </script>
+
+</body>
+</html>

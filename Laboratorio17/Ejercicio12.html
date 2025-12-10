@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Ejercicio 12</h2>
+
+    <script>
+    function procesarLista(lista, callbackFinal) {
+        let procesados = 0
+
+        lista.forEach(num => {
+            const tiempo = Math.random() * (1500 - 500) + 500;
+
+            setTimeout(() => {
+                document.write("Procesando " + num + "...<br>")
+                procesados++
+
+                if (procesados === lista.length) {
+                    callbackFinal("Proceso completado")
+                }
+            }, tiempo)
+        })
+    }
+
+    procesarLista([3, 7, 1, 9], msg => {
+        document.write(msg)
+    })
+    </script>
+
+</body>
+</html>

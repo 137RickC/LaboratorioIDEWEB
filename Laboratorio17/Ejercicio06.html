@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+    <h2>Ejercicio 6</h2>
+    <div id="out"></div>
+
+    <script>
+    function validarEdad(edad) {
+        if ((edad) || edad < 0) {
+            throw new Error("Edad inválida")
+        }
+    }
+
+    try {
+        validarEdad(-5)
+    } catch (e) {
+        document.getElementById("out").textContent = e.message
+    }
+    </script>
+</body>
+</html>
