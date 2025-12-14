@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then(function(response) {
+            return response.json()
+        })
+        .then(function(usuarios) {
+            usuarios.forEach(function(usuario) {
+                console.log('Nombre:', usuario.name)
+            })
+        })
+        .catch(function(error) {
+            console.error('Error al cargar los usuarios:', error)
+        })
+</script>
+
+</body>
+</html>

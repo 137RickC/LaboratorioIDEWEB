@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function cargarUsuario(){
+            try {
+                let response = await fetch('https://jsonplaceholder.typicode.com/users/10')
+                let usuario = await response.json()
+                console.log('Nombre: ' + usuario.name)
+                console.log('Email: ' + usuario.email)
+                console.log('username: ' + usuario.username)
+            } catch (error) {
+                console.error('Error al cargar el usuario:', error)
+            }
+        }
+        cargarUsuario()
+    </script>
+</body>
+</html>
