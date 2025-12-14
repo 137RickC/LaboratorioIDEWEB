@@ -11,48 +11,38 @@ def agregar_estudiante():
         "edad": edad,
         "promedio": promedio
     }
-
     estudiantes.append(estudiante)
     print("Estudiante agregado correctamente.\n")
-
 
 def mostrar_estudiantes():
     if not estudiantes:
         print("No hay estudiantes registrados.\n")
         return
-
     for e in estudiantes:
         print(f"Nombre: {e['nombre']}, Edad: {e['edad']}, Promedio: {e['promedio']}")
     print()
-
 
 def mejor_promedio():
     if not estudiantes:
         print("No hay estudiantes registrados.\n")
         return
-
     mejor = estudiantes[0]
     for e in estudiantes:
         if e["promedio"] > mejor["promedio"]:
             mejor = e
-
     print("Estudiante con mejor promedio:")
     print(f"Nombre: {mejor['nombre']}, Edad: {mejor['edad']}, Promedio: {mejor['promedio']}\n")
-
 
 def buscar_por_nombre():
     nombre = input("Ingrese el nombre a buscar: ").strip()
     encontrado = False
-
     for e in estudiantes:
         if e["nombre"].lower() == nombre.lower():
             print(f"Nombre: {e['nombre']}, Edad: {e['edad']}, Promedio: {e['promedio']}\n")
             encontrado = True
             break
-
     if not encontrado:
         print("Estudiante no encontrado.\n")
-
 
 def eliminar_por_nombre():
     nombre = input("Ingrese el nombre a eliminar: ").strip()
@@ -64,8 +54,6 @@ def eliminar_por_nombre():
             return
 
     print("Estudiante no encontrado.\n")
-
-
 #Menu de opciones
 while True:
     print("REGISTRO DE ESTUDIANTES")
