@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function statsPokemon(nombre) {
+            const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${nombre}`);
+            const data = await res.json();
+
+            data.stats.forEach(stat => {
+                console.log(stat.stat.name + ": " + stat.base_stat);
+            });
+        }
+        statsPokemon("pikachu")
+    </script>
+</body>
+</html>

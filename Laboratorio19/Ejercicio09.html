@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body>
+<input type="number" id="pokemonId" placeholder="ID Pokémon">
+<button onclick="buscarPokemon()">Buscar</button>
+
+<div id="resultado"></div>
+
+<script>
+async function buscarPokemon() {
+    const id = document.getElementById("pokemonId").value
+    const contenedor = document.getElementById("resultado")
+
+    try {
+        const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+        const data = await res.json()
+
+        const habilidades = data.abilities.map(h => h.ability.name).join(", ")
+
+        contenedor.innerHTML = `
+            <img src="${data.sprites.front_default}">
+            <p>ID: ${data.id}</p>
+            <p>Nombre: ${data.name}</p>
+            <p>Peso: ${data.weight}</p>
+            <p>Altura: ${data.height}</p>
+            <p>Habilidades: ${habilidades}</p>
+        `
+    } catch (error) {
+        contenedor.innerHTML = "Pokémon no encontrado"
+    }
+}
+</script>
+</body>
+</html>

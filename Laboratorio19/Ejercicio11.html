@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="pokemon" placeholder="Nombre o ID">
+    <button onclick="buscar()">Buscar</button>
+    <div id="info"></div>
+    <script>
+        async function buscar() {
+            const nombre = document.getElementById("pokemon").value
+            const info = document.getElementById("info")
+
+            const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${nombre}`)
+            const data = await res.json()
+
+            const tipos = data.types.map(t => t.type.name).join(", ")
+
+            info.innerHTML = `
+                <img src="${data.sprites.front_default}">
+                <p>${data.name}</p>
+                <p>Tipos: ${tipos}</p>
+            `
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="poke">
+    <button onclick="verStats()">Ver stats</button>
+    <table border="1">
+        <tbody id="tabla"></tbody>
+    </table>
+    <script>
+        async function verStats() {
+            const nombre = document.getElementById("poke").value
+            const tabla = document.getElementById("tabla")
+
+            const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${nombre}`)
+            const data = await res.json()
+
+            tabla.innerHTML = ""
+
+            data.stats.forEach(s => {
+                tabla.innerHTML += `
+                    <tr>
+                        <td>${s.stat.name}</td>
+                        <td>${s.base_stat}</td>
+                    </tr>
+                `
+            })
+        }
+    </script>
+</body>
+</html>
