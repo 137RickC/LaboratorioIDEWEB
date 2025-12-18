@@ -10,21 +10,21 @@
     <button onclick="siguiente()">Siguiente</button>
     <div id="cards"></div>
     <script>
-        let pokemons = [];
-    let indice = 0;
+        let pokemons = []
+    let indice = 0
 
     async function cargarTodos() {
         for (let i = 1; i <= 12; i++) {
-            const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
-            const data = await res.json();
-            pokemons.push(data);
+            const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
+            const data = await res.json()
+            pokemons.push(data)
         }
-        mostrar();
+        mostrar()
     }
 
     function mostrar() {
-        const cont = document.getElementById("cards");
-        cont.innerHTML = "";
+        const cont = document.getElementById("cards")
+        cont.innerHTML = ""
 
         for (let i = indice; i < indice + 3 && i < pokemons.length; i++) {
             cont.innerHTML += `
@@ -33,25 +33,25 @@
                     <p>${pokemons[i].name}</p>
                     <p>ID: ${pokemons[i].id}</p>
                 </div>
-            `;
+            `
         }
     }
 
     function siguiente() {
         if (indice + 3 < pokemons.length) {
-            indice += 3;
-            mostrar();
+            indice += 3
+            mostrar()
         }
     }
 
     function anterior() {
         if (indice - 3 >= 0) {
-            indice -= 3;
-            mostrar();
+            indice -= 3
+            mostrar()
         }
     }
 
-    cargarTodos();
+    cargarTodos()
     </script>
 </body>
 </html>
